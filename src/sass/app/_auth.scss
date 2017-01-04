@@ -1,0 +1,42 @@
+.auth-main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    .panel {
+        width: 800px;
+        padding: 32px;
+    }
+
+    h1 {
+        font-weight: $font-light;
+        margin-bottom: 28px;
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+        outline: none;
+        transition: all 0.2s ease;
+        color: $primary;
+        &:hover {
+            color: $primary-dark;
+        }
+    }
+
+    .control-label {
+        padding-top: 11px;
+    }
+
+    .form-group {
+        margin-bottom: 12px;
+    }
+}
+
+.auth-link {
+    display: block;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 33px;
+}

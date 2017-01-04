@@ -1,0 +1,119 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default bootstrap-panel">
+            <div class="panel-body">
+
+                <div class="form-container">
+
+                    <div class="form-title">
+                        <div>Basic Details</div>
+                        <div>Fields marked with * are required. A question can have only one correct answer.</div>
+                    </div>
+
+                    <div class="form-content">
+                        <form novalidate ng-submit="form.save()">
+                            <div class="form-group">
+                                <label for="question">Question *</label>
+                                <textarea class="form-control" rows="3" id="question"
+                                    ng-model="form.model.question" placeholder="Question Text">
+                                </textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <img ngf-thumbnail="form.model.question_image">
+                                <button class="btn btn-default" ngf-select
+                                    ng-model="form.model.question_image"
+                                    ngf-pattern="'image/*'" ngf-accept="'image/*'"
+                                    ngf-min-height="250" ngf-min-width="250"
+                                    ngf-resize="{width: 250, height:250}">
+                                    UPLOAD IMAGE FOR THE QUESTION
+                                </button>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="category">Question Category *</label>
+                                <select class="form-control" id="category" ng-model="form.model.category">
+                                    <option value="c3511e44-e16f-411e-a04a-ba3267556338">Teeth</option>
+                                    <option value="1f81e809-9aac-4c42-a1ed-df6078f49f9c">Teeth Types</option>
+                                    <option value="c62af197-7f28-4908-8e0a-ca845e38ea1a">Teeth Sets</option>
+                                </select>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="choice">Choice One *</label>
+                                        <input type="text" class="form-control" id="choice"
+                                            ng-model="form.model.choices[0].choice_text" placeholder="Choice Text" />
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" ng-model="form.model.choices[0].is_right"> Is correct choice
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="choice">Choice Two *</label>
+                                        <input type="text" class="form-control" id="choice"
+                                            ng-model="form.model.choices[1].choice_text" placeholder="Choice Text" />
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" ng-model="form.model.choices[1].is_right"> Is correct choice
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="choice">Choice Three *</label>
+                                        <input type="text" class="form-control" id="choice"
+                                            ng-model="form.model.choices[2].choice_text" placeholder="Choice Text" />
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" ng-model="form.model.choices[2].is_right"> Is correct choice
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="choice">Choice Four *</label>
+                                        <input type="text" class="form-control" id="choice"
+                                            ng-model="form.model.choices[3].choice_text" placeholder="Choice Text" />
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" ng-model="form.model.choices[3].is_right"> Is correct choice
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-sm">Save</button>
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    ng-click="form.cancel()">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

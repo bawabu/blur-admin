@@ -1,0 +1,24 @@
+<div class="form-container">
+
+    <div class="form-title">
+        <div>{{ form.formTitle }}</div>
+        <div>{{ form.formHelpText }}</div>
+    </div>
+
+    <div class="form-content">
+        <form novalidate name="elimikaForm" ng-submit="form.saveFxn(elimikaForm)">
+            <formly-form model="form.model" fields="form.fields" form="elimikaForm">
+                <div>
+                    <button type="submit" class="btn btn-primary btn-sm">
+                        {{ form.btnAction ? form.btnAction : 'Save' }}
+                    </button>
+                    <button type='button' class="btn btn-default btn-sm"
+                        ng-click="form.cancelFxn()">
+                        Cancel
+                    </button>
+                </div>
+            </formly-form>
+        </form>
+    </div>
+
+</div>

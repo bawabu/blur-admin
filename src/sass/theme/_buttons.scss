@@ -5,12 +5,12 @@ $hover: 24;
 }
 
 .btn {
-  border-radius: 5px;
+  border-radius: 0px;
   transition: all 0.1s ease;
 }
 
 .btn:hover {
-  transform: scale(1.2);
+  transform: scale(1);
 }
 
 @mixin styleButton($color, $borderColor) {

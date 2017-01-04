@@ -20,7 +20,7 @@
     "amcharts": "~3.15.2",
     "amcharts-stock": "*",
     "ammap": "~3.14.5",
-    "angular": "~1.4.8",
+    "angular": "~1.5.8",
     "angular-route": "~1.4.6",
     "angular-slimscroll": "~1.1.5",
     "angular-smart-table": "~2.1.3",
@@ -53,10 +53,22 @@
     "angular-animate": "~1.4.8",
     "textAngular": "~1.4.6",
     "angular-xeditable": "~0.1.9",
-    "ng-js-tree": "~0.0.7"
+    "ng-js-tree": "~0.0.7",
+    "datatables.net": "^1.10.12",
+    "datatables.net-bs": "^1.10.12",
+    "angular-datatables": "^0.5.5",
+    "api-check": "^7.5.5",
+    "angular-formly": "^8.4.0",
+    "angular-formly-templates-bootstrap": "^6.3.2",
+    "angular-formly-repeating-section": "^0.0.1",
+    "highcharts": "^5.0.0",
+    "highcharts-ng": "^0.0.13",
+    "ng-file-upload": "^12.2.12",
+    "angular-cookies": "^1.5.8",
+    "vis": "^4.17.0"
   },
   "resolutions": {
-    "angular": "~1.4.8"
+    "angular": "~1.5.8"
   },
   "overrides": {
     "amcharts": {

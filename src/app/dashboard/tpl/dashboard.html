@@ -1,0 +1,71 @@
+<div class="row">
+    <div class="statistics">
+        <div class="col-md-4 col-sm-12 statistic-container" ng-repeat="stat in ed.statistics">
+            <div class="panel panel-default bootstrap-panel">
+                <div class="panel-body">
+                    <div class="statistic-description">
+                        <div>{{ ::stat.title }}</div>
+                        <div class="stat-number">{{ ::stat.number }}</div>
+                    </div>
+                    <i class="statistic-icon icon {{ ::stat.icon }}"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel panel-default bootstrap-panel">
+            <div class="panel-heading">
+                TOTAL RESPONSES PER CATEGORY
+            </div>
+            <div class="panel-body">
+
+                <div class="answer-chart">
+                    <div class="answer-canvas">
+                        <canvas id="answerChart" width="300" height="300"></canvas>
+                        <div class="answer-chart-text">
+                            {{ ::ed.totalAnswers }}
+                            <span>Total Responses</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="answer-info">
+                    <div class="answer-info-item" ng-repeat="item in ed.answerStats">
+                        <div class="legend-color" style="background-color: {{  ::item.color }};"></div>
+                        <p>
+                            {{ ::item.label }}
+                            <span class="answer-stats">
+                                Correct: {{ ::item.correct }}%, Wrong: {{ ::item.wrong }}%
+                            </span>
+                        </p>
+                        <div class="progress progress-sm answer-progress">
+                            <div class="progress-bar" role="progressbar"
+                                aria-valuenow="{{ ::item.correct }}" aria-valuemin="0"
+                                aria-valuemax="100" style="width: {{ ::item.correct }}%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="row">
+    <div class="col-sm-12">
+        <div class="panel panel-default bootstrap-panel">
+            <div class="panel-heading">
+                TOTAL RESPONSES PER DAY
+            </div>
+            <div class="panel-body" align="center">
+
+                <div id="answerCalendar" class="answer-calendar"></div>
+
+            </div>
+        </div>
+    </div>
+</div> -->
